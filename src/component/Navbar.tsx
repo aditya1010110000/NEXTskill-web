@@ -48,19 +48,19 @@ const Navbar: React.FC = () => {
               onClick={() => navigate("/monitor")}
               className="px-8 py-3 rounded-xl"
             >
-              Skills Monitor
+              Skills
             </button>
             <button
               onClick={() => navigate("/roadmap")}
               className="px-8 py-3 rounded-xl"
             >
-              Career Roadmap
+              Roadmap
             </button>
             <button
               onClick={() => navigate("/books")}
               className="px-8 py-3 rounded-xl"
             >
-              Course Library
+              Library
             </button>
             <button
               onClick={() => navigate("/quiz")}
