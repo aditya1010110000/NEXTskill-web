@@ -5,23 +5,25 @@ import MonitorPage from './pages/MonitorPage';
 import BooksPage from './pages/BooksPage';
 import RoadmapPage from './pages/RoadmapPage';
 import QuizPage from './pages/QuizPage';
-import HomePage from './pages/HomePage'
+import HomePage from './pages/HomePage';
 import Profile from './pages/Profile';
+import Layout from './component/layout';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-black text-white">
-        <Routes>
+      <Routes>
+        {/* All pages wrapped with Layout, which includes Navbar and Footer */}
+        <Route element={<Layout />}>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/hii" element={<HomePage />} />
-          <Route path="/" element={<LandingPage />} />S
           <Route path="/monitor" element={<MonitorPage />} />
           <Route path="/books" element={<BooksPage />} />
           <Route path="/roadmap" element={<RoadmapPage />} />
           <Route path="/quiz" element={<QuizPage />} />
           <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </div>
+        </Route>
+      </Routes>
     </Router>
   );
 }

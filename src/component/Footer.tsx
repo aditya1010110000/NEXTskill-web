@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
 
         {/* Divider + Bottom */}
       </footer>
-      <div className="w-full h-0 border-t border-white border-3 my-14 pt-6 text-center text-sm text-gray-600">
+      <div className="w-full h-0 my-14 pt-6 text-center text-sm text-gray-600">
         © {new Date().getFullYear()} MyBrand. All rights reserved.
       </div>
     </div>
