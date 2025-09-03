@@ -34,7 +34,7 @@ const LandingPage: React.FC = () => {
       <Navbar />
 
       {/* Main Content - Split Layout */}
-      <div className="relative z-10 container mx-auto pt-10 pb-20 px-6 flex-grow">
+      <div className="relative z-10 container mx-auto pt-10 pb-5 px-6 flex-grow">
         <div className="flex items-center justify-between h-full max-w-6xl mx-auto min-h-[70vh]">
           {/* Left Side - Text Content */}
           <div className="w-1/2 pr-12">
@@ -133,7 +133,7 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="w-full border-t-2 border-white mt-10"></div>
+        {/* <div className="w-full border-t-2 border-white mt-10"></div> */}
       </div>
 
       {/* <Footer /> */}
