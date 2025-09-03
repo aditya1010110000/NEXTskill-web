@@ -23,7 +23,7 @@ const BooksPage: React.FC = () => {
       {courses.map((course, index) => (
         <div
           key={index}
-          className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 hover:border-green-500/50 hover:bg-gray-800/50 transition-all duration-300 hover:scale-105 group"
+          className="bg-white/80 backdrop-blur-sm border border-gray-300 rounded-xl p-4 hover:border-green-500 hover:bg-green-50 transition-all duration-300 hover:scale-105 group"
         >
           {/* Course Header */}
           <div className="w-full h-24 bg-[#0a1a2f] rounded-lg mb-3 flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
@@ -33,17 +33,17 @@ const BooksPage: React.FC = () => {
           {/* Course Info */}
           <div className="space-y-2">
             <div className="flex justify-between items-start">
-              <span className="text-[10px] font-medium text-green-400 bg-green-400/10 px-2 py-0.5 rounded-full">
+              <span className="text-[10px] font-medium text-green-700 bg-green-100 px-2 py-0.5 rounded-full">
                 {course.category}
               </span>
-              <span className="text-xs text-gray-400">{course.level}</span>
+              <span className="text-xs text-gray-700">{course.level}</span>
             </div>
 
-            <h3 className="text-base font-semibold text-white leading-tight">
+            <h3 className="text-base font-semibold text-gray-900 leading-tight">
               {course.title}
             </h3>
 
-            <p className="text-gray-400 text-xs leading-relaxed">
+            <p className="text-gray-700 text-xs leading-relaxed">
               {course.description}
             </p>
 
@@ -51,14 +51,14 @@ const BooksPage: React.FC = () => {
             {isSuggested ? (
               <button
                 onClick={() => handleEnroll(course)}
-                className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 px-3 py-1.5 rounded-md transition-all duration-300 text-sm text-white font-medium"
+                className="w-full bg-[#064e3b] hover:bg-[#05392f] text-white px-3 py-1.5 rounded-md transition-colors duration-300 text-sm font-medium"
               >
                 Enroll Now
               </button>
             ) : (
               <button
                 onClick={() => handleUnenroll(course)}
-                className="w-full bg-gradient-to-r from-red-700 to-red-800 hover:from-red-600 hover:to-red-700 px-3 py-1.5 rounded-md transition-all duration-300 text-sm text-white font-medium"
+                className="w-full bg-red-700 hover:bg-red-600 text-white px-3 py-1.5 rounded-md transition-colors duration-300 text-sm font-medium"
               >
                 Unenroll
               </button>
@@ -96,7 +96,7 @@ const BooksPage: React.FC = () => {
           {yourCourses.length > 0 ? (
             renderCourses(yourCourses, false)
           ) : (
-            <p className="text-gray-400">You haven’t enrolled in any courses yet.</p>
+            <p className="text-gray-700">You haven’t enrolled in any courses yet.</p>
           )}
         </div>
 
@@ -106,7 +106,7 @@ const BooksPage: React.FC = () => {
           {suggestedCourses.length > 0 ? (
             renderCourses(suggestedCourses, true)
           ) : (
-            <p className="text-gray-400">No more suggested courses 🎉</p>
+            <p className="text-gray-700">No more suggested courses 🎉</p>
           )}
         </div>
       </div>
